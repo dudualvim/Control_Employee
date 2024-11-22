@@ -24,7 +24,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   };
 
   const handleClearFilters = () => {
-    setActiveButton(null); // Define como nenhum botão ativo
+    setActiveButton(null);
     onClearFilters();
   };
 

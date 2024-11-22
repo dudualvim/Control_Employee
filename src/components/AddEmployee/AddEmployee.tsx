@@ -55,10 +55,10 @@ const AddEmployee: React.FC<AddEmployeeProps> = ({
 
       if (response.ok) {
         const createdEmployee = await response.json();
-        onAddEmployee(createdEmployee); // Atualiza a lista de funcionários
-        form.resetFields(); // Limpa o formulário
-        setActivities([{ id: Date.now(), epis: [{ id: Date.now() }] }]); // Reseta as atividades
-        setIsActive(true); // Reseta o status do funcionário
+        onAddEmployee(createdEmployee);
+        form.resetFields();
+        setActivities([{ id: Date.now(), epis: [{ id: Date.now() }] }]); 
+        setIsActive(true); 
         alert("Funcionário salvo com sucesso!");
       } else {
         alert("Erro ao salvar funcionário.");

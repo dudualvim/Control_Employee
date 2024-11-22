@@ -9,22 +9,21 @@ const { Content } = Layout;
 
 const UpComingSteps: React.FC = () => {
   const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(2); // Começa no passo 2
-  const [completedSteps, setCompletedSteps] = useState<number[]>([1]); // Passo 1 já concluído
-  const [allBlue] = useState(true); // Sempre azul em UpComingSteps
-
+  const [currentStep, setCurrentStep] = useState(2);
+  const [completedSteps, setCompletedSteps] = useState<number[]>([1]); 
+  const [allBlue] = useState(true); 
   const handleNextStep = () => {
     if (currentStep < 9) {
-      setCompletedSteps((prev) => Array.from(new Set([...prev, currentStep]))); // Marca o passo atual como concluído
-      setCurrentStep((prev) => prev + 1); // Avança para o próximo passo
+      setCompletedSteps((prev) => Array.from(new Set([...prev, currentStep])));
+      setCurrentStep((prev) => prev + 1);
     }
   };
 
   const handlePreviousStep = () => {
     if (currentStep > 1) {
-      setCurrentStep((prev) => prev - 1); // Volta ao passo anterior
-      setCompletedSteps((prev) => prev.filter((step) => step !== currentStep - 1)); // Remove o passo anterior da lista de concluídos
-      if (currentStep === 2) navigate('/'); // Redireciona para a Home no passo 1
+      setCurrentStep((prev) => prev - 1);
+      setCompletedSteps((prev) => prev.filter((step) => step !== currentStep - 1));
+      if (currentStep === 2) navigate('/'); 
     }
   };
 

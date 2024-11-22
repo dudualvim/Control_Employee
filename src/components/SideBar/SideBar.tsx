@@ -13,7 +13,7 @@ import './SideBar.scss';
 
 const SideBar: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedKey, setSelectedKey] = useState('dashboard'); // Controla o item selecionado
+  const [selectedKey, setSelectedKey] = useState('dashboard'); 
 
   const menuItems = [
     { key: 'dashboard', icon: <AppstoreOutlined style={{ fontSize: '20px' }} />, label: 'Dashboard' },
@@ -25,11 +25,11 @@ const SideBar: React.FC = () => {
   ];
 
   const handleMenuClick = (key: string) => {
-    setSelectedKey(key); // Atualiza o item selecionado
+    setSelectedKey(key); 
     if (key === 'edit') {
-      navigate('/'); // Vai para a Home
+      navigate('/'); 
     } else {
-      navigate('/upcoming-pages'); // Vai para a página "Em breve"
+      navigate('/upcoming-pages'); 
     }
   };
 
@@ -40,7 +40,7 @@ const SideBar: React.FC = () => {
         mode="vertical"
         theme="light"
         className="sidebar__menu"
-        selectedKeys={[selectedKey]} // Define o item ativo
+        selectedKeys={[selectedKey]} 
         items={menuItems.map((item) => ({
           key: item.key,
           icon: <div className="sidebar__icon">{item.icon}</div>,

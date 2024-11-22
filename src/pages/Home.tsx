@@ -12,7 +12,7 @@ import '../styles/Home.scss';
 const { Content } = Layout;
 
 interface Employee {
-  id: number; // Certifique-se de que IDs sejam inteiros únicos
+  id: number; 
   name: string;
   cpf: string;
   status: 'Ativo' | 'Inativo';
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [filteredEmployees, setFilteredEmployees] = useState<Employee[]>([]);
 
-  // Fetch inicial para carregar os funcionários do banco de dados
+  
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
     fetchEmployees();
   }, []);
 
-  // Adicionar um funcionário
+  
   const handleAddEmployee = (newEmployee: Employee) => {
     const updatedEmployees = [...employees, newEmployee];
     setEmployees(updatedEmployees);
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
     setViewingAddEmployee(false);
   };
 
-  // Excluir um funcionário
+  
   const handleDeleteEmployee = async (id: number) => {
     try {
       const response = await fetch(`http://localhost:3001/employees/${id}`, {
@@ -74,37 +74,37 @@ const Home: React.FC = () => {
     }
   };
 
-  // Editar um funcionário
+  
   const handleEditEmployee = (id: number) => {
     message.info(`Editar funcionário com ID: ${id}`);
-    // Lógica para editar funcionário
+    
   };
 
-  // Filtrar funcionários ativos
+ 
   const handleViewActive = () => {
     setFilteredEmployees(employees.filter((e) => e.status === 'Ativo'));
   };
 
-  // Limpar filtros
+  
   const handleClearFilters = () => {
     setFilteredEmployees(employees);
   };
 
-  // Controles de etapas
-  const [currentStep, setCurrentStep] = useState(1); // Passo atual
-  const [completedSteps, setCompletedSteps] = useState<number[]>([]); // Passos concluídos
-  const [allBlue, setAllBlue] = useState(false); // Controla quando todos os itens ficam azuis
+  
+  const [currentStep, setCurrentStep] = useState(1); 
+  const [completedSteps, setCompletedSteps] = useState<number[]>([]); 
+  const [allBlue, setAllBlue] = useState(false); 
 
   const toggleComplete = () => {
-    setAllBlue((prev) => !prev); // Alterna entre azul ou não
+    setAllBlue((prev) => !prev); 
   };
 
   const handleNextStep = () => {
     if (allBlue) {
-      setCompletedSteps((prev) => [...new Set([...prev, currentStep])]); // Marca o passo atual como concluído
-      setCurrentStep((prev) => prev + 1); // Avança para o próximo passo
+      setCompletedSteps((prev) => [...new Set([...prev, currentStep])]); 
+      setCurrentStep((prev) => prev + 1); 
       if (currentStep === 1) {
-        navigate('/upcoming-steps'); // Redireciona para a tela de passos futuros no próximo passo
+        navigate('/upcoming-steps'); 
       }
     }
   };
