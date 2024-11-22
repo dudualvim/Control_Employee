@@ -1,0 +1,99 @@
+.header-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+  }
+
+  &__step-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbdbdb;
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+
+    &--always-active {
+      background-color: #649fbf; /* Azul permanente para o primeiro item */
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    &--active {
+      background-color: #649fbf; /* Azul para itens ativados pelo switch */
+      color: #fff;
+      border: none; /* Sem borda preta */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    &--completed {
+      background-color: #649fbf; /* Azul para o item já concluído */
+      color: #fff;
+      border: 2px solid #003e5f; /* Apenas o primeiro item possui a borda */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    &--border {
+      border: 2px solid #003e5f; /* Borda preta no item atual */
+    }
+  }
+
+  &__icon {
+    font-size: 28px;
+  }
+
+  &__label {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #646464;
+    text-align: center;
+
+    &--active {
+      color: #649fbf;
+      font-weight: bold;
+    }
+  }
+
+  &__status {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000; /* Verde para o status "Concluído" */
+    margin-top: 5px;
+  }
+
+  &__dashed-line {
+    flex: 1;
+    height: 4px;
+    background: repeating-linear-gradient(
+      to right,
+      #649fbf,
+      #649fbf 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Eduardo de Oliveira Alvim",
+      "cpf": "12312312",
+      "status": "Ativo",
+      "gender": "Masculino",
+      "role": "Cargo 1",
+      "activities": [
+        {
+          "activity": "Atividade 2",
+          "epis": [
+            {
+              "epi": "Calçado de segurança",
+              "caNumber": "12312312"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Daniel Alves da Silva",
+      "cpf": "000.000.000-99",
+      "status": "Ativo",
+      "gender": "Masculino",
+      "role": "Cargo 2",
+      "activities": [
+        {
+          "activity": "Atividade 1",
+          "epis": [
+            {
+              "epi": "Capacete de segurança",
+              "caNumber": "456456"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ana Bispo dos Santos",
+      "cpf": "000.000.000-77",
+      "status": "Inativo",
+      "gender": "Feminino",
+      "role": "Cargo 3",
+      "activities": [
+        {
+          "activity": "Atividade 3",
+          "epis": [
+            {
+              "epi": "Óculos de proteção",
+              "caNumber": "789789"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Regina Elisa Souza",
+      "cpf": "000.000.000-88",
+      "status": "Ativo",
+      "gender": "Feminino",
+      "role": "Cargo 1",
+      "activities": [
+        {
+          "activity": "Atividade 2",
+          "epis": [
+            {
+              "epi": "Luvas de proteção",
+              "caNumber": "101010"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

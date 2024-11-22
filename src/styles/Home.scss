@@ -1,0 +1,197 @@
+.home-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  &__sider {
+    background-color: #649fbf;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__main {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__content-right {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  &__content-right-header {
+    background-color: #649fbf;
+    color: white;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+
+    .home-layout__content-right-header-text {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+
+  &__content-right-body {
+    padding: 20px;
+  }
+
+  &__actions-container {
+    margin-bottom: 20px;
+
+    .home-layout__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .home-layout__info {
+        margin-left: auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  }
+
+  &__switch {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0px;
+
+    &-label {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    .custom-switch {
+      background-color: #649fbf !important;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: 20px;
+  }
+
+  .next-step-button {
+    background-color: #a8a8a8;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 52px;
+    cursor: not-allowed; /* Desativa o botão visualmente */
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #8a8a8a;
+    }
+
+    &.enabled {
+      background-color: #649fbf; /* Azul para o botão ativo */
+      cursor: pointer;
+
+      &:hover {
+        background-color: #4a7c9f; /* Azul mais escuro ao passar o mouse */
+      }
+    }
+  }
+
+  .next-step-button,
+  .previous-step-button {
+    background-color: #a8a8a8;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #8a8a8a;
+    }
+
+    &.enabled {
+      background-color: #649fbf;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #4a7c9f;
+      }
+    }
+  }
+
+  .previous-step-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .upcoming-content {
+    text-align: center;
+    background-color: #649fbf;
+    padding: 20px 20px;
+    border-radius: 30px;
+  }
+
+  .upcoming-content-title {
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .upcoming-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .previous-step-button {
+    background-color: #649fbf;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+
+    &:hover {
+      background-color: #4a7c9f; /* Azul mais escuro ao passar o mouse */
+    }
+
+    &:disabled {
+      background-color: #a8a8a8;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+}
