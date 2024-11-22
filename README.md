@@ -6,10 +6,6 @@ A aplicação utiliza um front-end em React com TypeScript e Redux para gerencia
 -------------------------------------------------------------------------------------------------------------------
 
 
-"==========================================="
-"🚀 Bem-vindo ao setup do Control Employee!"
-"==========================================="
-
 # Passo 1: Clonar o repositório
 "📁 Clonando o repositório..."
 git clone https://github.com/dudualvim/Control_Employee.git 
