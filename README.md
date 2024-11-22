@@ -1,4 +1,6 @@
-#!/bin/bash
+
+**Control Employee**
+Control Employee é uma aplicação para gerenciar funcionários, permitindo adicionar, editar e excluir dados dos mesmos. A aplicação utiliza um front-end em React com TypeScript e Redux para gerenciar o estado, juntamente com um backend simulado usando JSON Server.
 
 "==========================================="
 "🚀 Bem-vindo ao setup do Control Employee!"
@@ -25,3 +27,6 @@ npm start
 "🎉 Setup concluído com sucesso!"
 "Acesse a aplicação em: http://localhost:3000"
 "JSON Server rodando em: http://localhost:3001/employees"
+
+
+De sempre um F5 pra qualquer problema de Cash :)
