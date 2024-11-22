@@ -1,6 +1,7 @@
 
-#Control Employee
-Control Employee é uma aplicação para gerenciar funcionários, permitindo adicionar, editar e excluir dados dos mesmos. A aplicação utiliza um front-end em React com TypeScript e Redux para gerenciar o estado, juntamente com um backend simulado usando JSON Server.
+# Control Employee
+Control Employee é uma aplicação para gerenciar funcionários, permitindo adicionar, editar e excluir dados dos mesmos. 
+A aplicação utiliza um front-end em React com TypeScript e Redux para gerenciar o estado, juntamente com um backend simulado usando JSON Server.
 
 "==========================================="
 "🚀 Bem-vindo ao setup do Control Employee!"
